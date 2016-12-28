@@ -1,5 +1,5 @@
 # Framer音频视觉化模块
-[[English version](#A Framer module to visualize music)]
+【[English version](#a-framer-module-to-visualize-music)】
 
 这个Framer module可以帮助你完成音频处理的任务，让你专注于可视化的创意。
 
