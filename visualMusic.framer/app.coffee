@@ -18,10 +18,9 @@ bg = new Layer
 	backgroundColor: 'transparent'
 bg.center()
 # 创建50个矩形图层
-balls = []
+squares = []
 for i in [0..50]
-	# print Utils.round(i%20)*10, Utils.round(i/20-0.5)
-	ball = balls[i] = new Layer
+	square = squares[i] = new Layer
 		name: "ball#{i}"
 		parent: bg
 		midX: 100
@@ -33,7 +32,9 @@ for i in [0..50]
 		borderWidth: 1
 # 开始视觉化，让每个矩形的大小根据能量值变化
 vm.onVisualizing = (sa)->
-	for i in [0...balls.length]
-		balls[i].scale = Utils.modulate(sa[i], [0, 255], [0, 1.2])
+	# 开始视觉化，这里的代码每秒执行60次
+	# 返回的sa是一个包含1024个元素的数组，每个元素都是一个0-255之间（包含0和255）的数字
+	for i in [0...squares.length]
+		squares[i].scale = Utils.modulate(sa[i], [0, 255], [0, 1.2])
 # 开始播放音乐
 vm.play()

@@ -13,9 +13,11 @@ class visualMusic
 
 		# 播放器、音频上下文和分析器
 		@audio = new Audio
-		@context = new webkitAudioContext() || AudioContext()
+		if typeof AudioContext=='function'
+			@context = new AudioContext()
+		else
+			@context = new webkitAudioContext()
 		@analyser = null
-
 		# 加载音频同时循环输出频谱
 		if @options.src
 			@loadMusic(@audio,@context,@options.src)
