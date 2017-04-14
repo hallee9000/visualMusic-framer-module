@@ -43,6 +43,7 @@ vm = new visualMusic
 ### 效果演示
 
 这是我写的一个效果，让方块的`scale`随着音乐节奏变化（参见项目visualMusic.framer）。
+[demo链接](https://framer.cloud/kPnpY)
 
 ![](demo.gif)
 
@@ -95,6 +96,7 @@ vm = new visualMusic
 ### Demo
 
 In this demo (see project `visualMusic.framer`), these squares can change their scales with the rhythm.
+[demo link](https://framer.cloud/kPnpY)
 
 ![](demo.gif)
 
